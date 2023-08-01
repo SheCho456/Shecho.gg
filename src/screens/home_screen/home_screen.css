@@ -1,0 +1,105 @@
+#mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animatedBackground{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./Images/backgroundChamps.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: animatedBackground 2000s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100000px 0;
+    }
+  }
+
+.nameButtonContainer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameButtonContainer button {
+    width: 20%;
+    height: 5vh;
+    font-size: 1.1vw;
+    white-space: nowrap;
+    font-family: 'Marcellus SC', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 15px; 
+    background: #1e2328;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+
+.nameButtonContainer button:hover {
+    text-shadow: 0 0 5px #ffffff80;
+    box-shadow: 0 0 8px 0 #ffffff50;
+    background: linear-gradient(to bottom, #1e2328, #433d2b);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.nameButtonContainer button:active {
+    text-shadow: none;
+    box-shadow: none;
+    color: #cdbe9130;
+    transform: translateY(2px);
+}
+
+.buttonGroup1{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.buttonGroup2{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#sidebarContainer{
+    background-color: rgb(18, 53, 36);
+    height: 100%;
+    width: 4%;
+}
+
+#sidebarContainer:hover{
+    width: 10%;
+}
+
+.logo{
+    height: 10%;
+    width: 100%;
+    cursor: pointer;
+    background-image: url("./Images/logo.png");
+    background-size: 4vw;
+    background-repeat: no-repeat;
+    background-position: 0%;
+}
